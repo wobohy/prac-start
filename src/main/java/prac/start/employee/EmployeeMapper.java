@@ -1,4 +1,4 @@
-package prac.employee;
+package prac.start.employee;
 
 import org.apache.ibatis.annotations.Mapper;
 

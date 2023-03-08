@@ -1,12 +1,14 @@
-package prac.employee;
+package prac.start.employee;
 
 import lombok.Builder;
 import lombok.Getter;
+import lombok.ToString;
 
 import java.util.Date;
 
 @Getter
 @Builder
+@ToString
 public class Employee {
     private String empId;       // 사원번호
     private String empName;     // 직원명
