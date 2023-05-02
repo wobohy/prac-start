@@ -8,6 +8,6 @@
     </select>
 
     <select id="getTime" resultType="String">
-        SELECT sysdate FROM dual
+        SELECT now() FROM dual
     </select>
 </mapper>

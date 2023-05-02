@@ -21,4 +21,11 @@ public class EmployeeServiceTest {
             System.out.println(employee);
         }
     }
+
+    @Test
+    @DisplayName("DB연결 확인용 현재 시간 조회")
+    void selectToday () {
+        String today = mapper.getTime();
+        System.out.println(today);
+    }
 }
