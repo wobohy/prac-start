@@ -16,10 +16,10 @@ public class DummyController {
         this.dummyService = dummyService;
     }
 
-    @GetMapping("/get/{step}")
-    public String getDummy(/*@PathVariable("id") String id, */@PathVariable("step") String step) {
-        System.out.println("step = " + step);
-        String step1 = dummyService.isStep(step);
-        return dummyService.getData("", "");
+    @GetMapping("/get/{category}")
+    public String getDummy(/*@PathVariable("id") String id, */@PathVariable("category") String category) {
+        System.out.println("category = " + category);
+        String step = dummyService.isStep(category);
+        return dummyService.getData(step);
     }
 }

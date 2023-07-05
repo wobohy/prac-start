@@ -19,7 +19,9 @@ public class DummyService {
         this.restTemplate = restTemplate;
     }
 
-    public String getData(String id, String apiUrl) {
+    public String getData(String step) {
+        String apiUrl = API_URL + step;
+
         HttpHeaders headers = new HttpHeaders();
         headers.set("app-id", APP_ID);
         HttpEntity<String> entity = new HttpEntity<>("body", headers);
@@ -32,9 +34,7 @@ public class DummyService {
         }
 
         if (HttpStatus.OK == response.getStatusCode()) {
-            String responseBody = response.getBody();
-            System.out.println("responseBody, " + responseBody);
-            return responseBody;
+            return response.getBody();
         } else {
             // API 호출 실패 처리 코드
             return "getDummy fail";
